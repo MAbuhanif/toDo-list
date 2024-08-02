@@ -1,45 +1,76 @@
-body{
-    font-family: "Poppins", sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 .container {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 500px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 500px;
 }
 
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
-#task-input{
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+#task-input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
-#add-task-btn{
-    width: 100%;
-    padding: 10px;
-    background: #5cb85c;
-    border: none;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    
+#add-task-btn {
+  width: 100%;
+  padding: 10px;
+  background: #5cb85c;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
-#add-task-btn:hover{
-    background: #4cae4c;
+#add-task-btn:hover {
+  background: #4cae4c;
 }
-#task-list{
-    list-style-type: none;
-    padding: 0;
+#task-list {
+  list-style-type: none;
+  padding: 0;
+}
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.task-item.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+.complete-btn {
+  background: #5bc0de;
+  border: none;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.delete-btn{
+  background: #d9534f;
+  border: none;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover{
+  opacity: 0.8;
 }
