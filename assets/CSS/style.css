@@ -36,3 +36,10 @@ h1{
     margin-bottom: 20px;
     
 }
+#add-task-btn:hover{
+    background: #4cae4c;
+}
+#task-list{
+    list-style-type: none;
+    padding: 0;
+}
