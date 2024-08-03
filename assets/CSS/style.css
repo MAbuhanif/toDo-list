@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: "Poppins", sans-serif;
   background-color: #f4f4f4;
@@ -5,22 +10,21 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
 }
 .container {
   background: white;
   padding: 20px;
+  margin: 0 10px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  max-width: 100%;
+  width: 400px;
 }
 
 h1 {
   text-align: center;
 }
 #task-input {
-  width: 90%;
+  width: 100%;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -61,36 +65,44 @@ h1 {
   text-decoration: line-through;
   color: #888;
 }
-.complete-btn, .delete-btn {
+.complete-btn,
+.delete-btn {
   background: none;
   border: none;
   color: white;
   padding: 5px;
   border-radius: 4px;
   cursor: pointer;
-  margin-left: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.complete-btn{
+.task-buttons{
+  display: flex;
+  gap: 5px;
+}
+.complete-btn {
   background: #5bc0de;
 }
 
-.complete-btn i{
-  margin-right: 3px;
 
-}
-.delete-btn{
+.delete-btn {
   background: #d95345;
 }
-
-.delete-btn i{
-  margin-right: 3px;
-
+button:hover {
+  opacity: 0.8;
 }
 
-
-button:hover{
-  opacity: 0.8;
+/* Media queries */
+@media screen and (min-width: 768px) {
+  .container {
+    width: 500px;
+    margin: 0 30px;
+  }
+  #add-task-btn,
+  .task-item,
+  .complete-btn,
+  .delete-btn {
+    padding: 8px;
+  }
 }

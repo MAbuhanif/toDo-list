@@ -13,24 +13,29 @@ document.addEventListener("DOMContentLoaded", () => {
   function addTask(taskText) {
     const taskItem = document.createElement("li");
     taskItem.className = "task-item";
+
     const taskSpan = document.createElement("span");
     taskSpan.textContent = taskText;
-    
+
+    const taskButtons = document.createElement("div");
+    taskButtons.className = "task-buttons";
+
     const completeBtn = document.createElement("button");
     completeBtn.className = "complete-btn";
-    completeBtn.textContent = "Complete";
+    completeBtn.innerHTML = '<i class="fas fa-check"></i>';
     completeBtn.addEventListener("click", () => {
       taskItem.classList.toggle("completed");
     });
     const deleteBtn = document.createElement("button");
     deleteBtn.className = "delete-btn";
-    deleteBtn.textContent = "Delete";
+    deleteBtn.innerHTML = '<i class="fas fa-trash"></i>';
     deleteBtn.addEventListener("click", () => {
       taskItem.remove();
     });
+    taskButtons.appendChild(completeBtn);
+    taskButtons.appendChild(deleteBtn);
     taskItem.appendChild(taskSpan);
-    taskItem.appendChild(completeBtn);
-    taskItem.appendChild(deleteBtn);
+    taskItem.appendChild(taskButtons);
 
     taskList.appendChild(taskItem);
   }
