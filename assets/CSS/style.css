@@ -22,6 +22,7 @@ body {
 
 h1 {
   text-align: center;
+  font-weight: 500;
 }
 h1 i{
   margin-right: 10px;
@@ -111,6 +112,10 @@ button:hover {
   .container {
     width: 500px;
     margin: 0 30px;
+  }
+  h1 {
+    
+    font-weight: 700;
   }
   #add-task-btn,
   .task-item,
