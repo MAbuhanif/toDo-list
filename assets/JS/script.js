@@ -8,6 +8,17 @@ document.addEventListener("DOMContentLoaded", () => {
     if (taskText !== "") {
       addTask(taskText);
       taskInput.value = "";
+      taskInput.classList.remove("error");
+      removeErrorMessage();
+    } else {
+      taskInput.classList.add("error");
+      displayErrorMessage("Task can not be empty!");
+    }
+  });
+  taskInput.addEventListener("input", () => {
+    if (taskInput.value.trim() !== "") {
+      taskInput.classList.remove("error");
+      removeErrorMessage();
     }
   });
   function addTask(taskText) {
@@ -38,5 +49,24 @@ document.addEventListener("DOMContentLoaded", () => {
     taskItem.appendChild(taskButtons);
 
     taskList.appendChild(taskItem);
+  }
+  function displayErrorMessage(message) {
+    let errorMessage = document.getElementById("error-message");
+    if (!errorMessage) {
+      errorMessage = document.createElement("div");
+      errorMessage.id = "error-message";
+      errorMessage.className = "error-message";
+      document
+        .querySelector(".container")
+        .insertBefore(errorMessage, taskInput.nextSibling);
+    }
+    errorMessage.textContent = message;
+  }
+
+  function removeErrorMessage() {
+    const errorMessage = document.getElementById("error-message");
+    if (errorMessage) {
+      errorMessage.remove();
+    }
   }
 });

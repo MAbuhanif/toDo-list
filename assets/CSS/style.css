@@ -30,6 +30,16 @@ h1 {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+#task-input.error {
+  border-color: #d9534f;
+}
+
+#error-message {
+  color: #d9534f;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
 #add-task-btn {
   width: 100%;
   padding: 10px;
@@ -79,7 +89,7 @@ h1 {
 }
 .task-buttons{
   display: flex;
-  gap: 5px;
+  gap: 10px;
 }
 .complete-btn {
   background: #5bc0de;
