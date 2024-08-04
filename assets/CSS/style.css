@@ -10,23 +10,32 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #f4f4f4;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+/* Header and footer section */
+header, footer {
+  width: 100%;
+  border-radius: 4px;
+  background-color: #807c7c;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 300px;
 }
 /* Task container */
 .container {
   background: white;
   padding: 20px;
-  margin: 0 10px;
-  border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 400px;
+  width: 300px;
+  max-width: 100%;
 }
 
 h1 {
-  text-align: center;
-  font-weight: 500;
+  margin: 0;
 }
 h1 i{
   margin-right: 10px;
@@ -51,7 +60,7 @@ h1 i{
 #add-task-btn {
   width: 100%;
   padding: 10px;
-  background: #5cb85c;
+  background: #807c7c;
   border: none;
   color: white;
   border-radius: 4px;
@@ -65,7 +74,7 @@ h1 i{
   margin-right: 5px;
 }
 #add-task-btn:hover {
-  background: #0dbb0d;
+  background: #242824;
 }
 #task-list {
   list-style-type: none;
@@ -115,6 +124,10 @@ button:hover {
   .container {
     width: 500px;
     margin: 0 30px;
+  }
+  header, footer{
+    width: 500px;
+    border-radius: 4px;
   }
   h1 {
     font-weight: 700;
