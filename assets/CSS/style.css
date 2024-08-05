@@ -106,7 +106,7 @@ h1 i{
 }
 .task-buttons{
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 .complete-btn {
   background: #5bc0de;
