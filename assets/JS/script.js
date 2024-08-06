@@ -1,10 +1,10 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const taskInput = document.getElementById("task-input");
-  const addTaskBtn = document.getElementById("add-task-btn");
-  const taskList = document.getElementById("task-list");
+document.addEventListener("DOMContentLoaded", function() {
+  var taskInput = document.getElementById("task-input");
+  var addTaskBtn = document.getElementById("add-task-btn");
+  var taskList = document.getElementById("task-list");
   // Event listener for the Add Task button
-  addTaskBtn.addEventListener("click", () => {
-    const taskText = taskInput.value.trim();
+  addTaskBtn.addEventListener("click", function() {
+    var taskText = taskInput.value.trim();
     if (taskText !== "") {
       addTask(taskText);
       taskInput.value = "";
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   // Event listener for input changes in the task input field
-  taskInput.addEventListener("input", () => {
+  taskInput.addEventListener("input", function() {
     if (taskInput.value.trim() !== "") {
       taskInput.classList.remove("error");
       removeErrorMessage();
@@ -27,27 +27,27 @@ document.addEventListener("DOMContentLoaded", () => {
    * The text of the task to add
    */
   function addTask(taskText) {
-    const taskItem = document.createElement("li");
+    var taskItem = document.createElement("li");
     taskItem.className = "task-item";
 
-    const taskSpan = document.createElement("span");
+    var taskSpan = document.createElement("span");
     taskSpan.textContent = taskText;
 
-    const taskButtons = document.createElement("div");
+    var taskButtons = document.createElement("div");
     taskButtons.className = "task-buttons";
 
     // Create and configure the Complete button
-    const completeBtn = document.createElement("button");
+    var completeBtn = document.createElement("button");
     completeBtn.className = "complete-btn";
     completeBtn.innerHTML = '<i class="fas fa-check"></i>';
-    completeBtn.addEventListener("click", () => {
+    completeBtn.addEventListener("click", function() {
       taskItem.classList.toggle("completed");
     });
     // Create and configure the Delete button
-    const deleteBtn = document.createElement("button");
+    var deleteBtn = document.createElement("button");
     deleteBtn.className = "delete-btn";
     deleteBtn.innerHTML = '<i class="fas fa-trash"></i>';
-    deleteBtn.addEventListener("click", () => {
+    deleteBtn.addEventListener("click", function() {
       taskItem.remove();
     });
     taskButtons.appendChild(completeBtn);
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
    * The error message to display
    */
   function displayErrorMessage(message) {
-    let errorMessage = document.getElementById("error-message");
+    var errorMessage = document.getElementById("error-message");
     if (!errorMessage) {
       errorMessage = document.createElement("div");
       errorMessage.id = "error-message";
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
    * Removes the error message from the DOM
    */
   function removeErrorMessage() {
-    const errorMessage = document.getElementById("error-message");
+    var errorMessage = document.getElementById("error-message");
     if (errorMessage) {
       errorMessage.remove();
     }
