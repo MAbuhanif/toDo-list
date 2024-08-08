@@ -43,13 +43,54 @@ A simple task manager web application to keep track of your to-do list. The app 
 4. Click the trash icon to delete a task.
 5. If the input field is empty, an error message will be displayed, and the task will not be added.
 
+# Wireframes
+- I sketched the wireframes using my pen and white paper. 
+
+## User Stories and UX Design Choices
+### User Stories
+1. As a user, I want to add tasks so that I can keep track of my to-do list.
+2. As a user, I want to mark tasks as completed so that I can see what I have accomplished.
+3. As a user, I want to delete tasks so that I can remove items that are no longer needed.
+4. As a user, I want to receive feedback when I try to add an empty task so that I understand why it wasn't added.
+### UX Design Choices
+#### Form Validation: 
+- Implemented form validation to improve user experience by preventing the addition of empty tasks.
+#### Responsive Design: 
+- Used media queries to ensure the application is usable on different screen sizes.
+#### Visual Feedback: 
+- Used visual cues (e.g., line-through for completed tasks) to provide clear feedback to the user.
+
 ## Testing
 
-> Testing on this project was mainly done manually by myself and a few friends to determine site usability, responsiveness and ensure it is intuitive to a completely new user.
+### JSHint Results
+
+ > I passed the JavaScript code through JSHint to ensure the code quality. Here are the results:
+ - No error found
+
+   ![JSHint](assets/images/testing/jsHint.png)
+
+
+## Manual Testing
+ 
+
+> The application was manually tested on different devices and browsers to ensure compatibility and responsiveness. Here are the steps I followed:
+
+### Add Task:
+- Entered a task and clicked "Add Task". The task was added to the list.
+
+### Complete Task:
+- Clicked the checkmark button next to a task. The task was marked as completed.
+
+### Delete Task:
+- Clicked the trash can button next to a task. The task was removed from the list.
+
+### Form Validation:
+- Tried to add an empty task. An error message was displayed.
 
 ## Google Lighthouse Testing
 
-  > ![google lighthouse](assets/images/testing/lightHouse.png)
+
+> ![google lighthouse](assets/images/testing/lightHouse.png)
 
 ## HTML Validation
 
